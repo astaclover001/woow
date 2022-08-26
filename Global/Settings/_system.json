@@ -1,0 +1,85 @@
+{
+    "SERVER": {
+        "ID": "922949759361237014",
+        "Name": "SE7EN"
+    },
+
+    "TOKENS": {
+        "Requirements": "OTcwODEyMDQxNjI5Njc1NTQw.YnBZKw.Kzp_qA0hSI0AZpx6pc1eID49ky0", 
+        "Statistics": "OTcwODEyNzQ4NzUxNTY4ODk4.YnBZ1A.7Fjr6rcMOVSBNlIRNtgOjjEUFDk",
+        "Voucher": "OTcxODgwNjcwNzI3MTM5Mzk4.YnQ8aA.9rGJk9JLPxf_m-MuW2yBZ-1YuLQ",
+
+        "SECURITY": {
+            "MAIN": "OTcwODEyOTE4MDA4NTI0ODAw.YnBZ_A.CsJgeGxBq1Pf9lIer2BVih8xkv0",
+            "SEC_ONE": "OTcwODEzMDEzOTE5NjkwNzYy.YnBaEw.r1mrkSlt7n-LIhXsXdyKy4YOAsQ",
+            "SEC_TWO": "OTcwODEzMTA4MDUyNDM0OTk0.GyLeUt.Rb24T-lSPMveJBJk_les0HFSqrekYKs2U1tNNc",
+            "SEC_THREE": "OTcwODEzMzE5MjM1NjY1OTcw.YnBaXA.hsr4o1Zl_HwNQMMrpxGgpF2autY",
+            "SEC_FOUR": "OTcwODEzMzk1MjIzODU5MjYw.YnBabg.JFBAgtGmsSybpeUROfvR2Lni6y4",
+            "DISTS": [
+                "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
+                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
+                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
+                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI"
+            ],
+            "GUILD_OWNER_TOKEN": ""
+        },
+
+        "WELCOME": {
+            "Active": true,
+            "WELCOMES": [
+                "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
+                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
+                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
+                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI",
+                ""
+        ],
+            "WELCOME_CHANNELS": [
+                "970368039021314169",
+        "970368040824893450",
+        "970368042158661733",
+        "970368043580551258",
+        "970368045136629820"
+            ]
+        }
+    },
+    "botSettings": {
+        "Prefixs": [".","+","!","/","-"]
+    },
+
+
+
+    "WELCOMES": [
+        "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
+                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
+                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
+                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI",
+                ""
+    ],
+
+    "WELCOME_CHANNELS": [
+        "970368039021314169",
+        "970368040824893450",
+        "970368042158661733",
+        "970368043580551258",
+        "970368045136629820"
+    ],
+
+    "embed": {
+        "iconURL": "",
+        "başlık": "",
+        "altbaşlık": "SE7EN Ø Créatéd by SEHIRΛ",
+        "renk": "RANDOM"
+      },
+
+    "botStatus": {
+        "Status": "dnd",
+        "Name": "SE7EN Ø Créatéd by SEHIRΛ ",
+        "voiceChannelID": "970368078116454530"
+    },
+    "Database" : {
+        "Active": true,
+        "MongoURL": "mongodb+srv://sehira:lespacra2@cluster0.nhjmm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    }
+
+}
+
