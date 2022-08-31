@@ -1,5 +1,4 @@
 const { Client, Collection, GuildMember, Guild, MessageEmbed, TextChannel } = require('discord.js');
-const Coins = require("../Databases/Schemas/Coins")
 
 /*
 * Sunucu içerisinde bulunan prototypelar
@@ -20,20 +19,11 @@ Guild.prototype.kanalBul = function(content) {
 }
 
 Guild.prototype.emojiGöster = function(content) {
-    let emoji = this.emojis.cache.find(e => e.name === content) || this.emojis.cache.find(e => e.id === content) || this.client.emojis.cache.find(e => e.id === content) || this.client.emojis.cache.find(e => e.name === content)
-    if(this.client.emojis.cache.find(e => e.id === content) || this.client.emojis.cache.find(e => e.name === content)) {
-        let emojicik = this.client.emojis.cache.find(e => e.id === content) || this.client.emojis.cache.find(e => e.name === content)
-        if(!emojicik) return null;
-        if(emojicik.animated) return `<a:${emojicik.name}:${emojicik.id}>`;
-        return `<:${emojicik.name}:${emojicik.id}>`;
-    }
+    let emoji = this.emojis.cache.find(e => e.name === content) || this.emojis.cache.find(e => e.id === content)
     if(!emoji) return client.logger.log(`${content} emojisi ${this.name} sunucusuna yüklenmediğinden kullanılamadı.`,"error");
     return emoji;
 }
 
-GuildMember.prototype.coinAdd = async function (Miktar) {
-    await Coins.updateOne({_id: this.user.id}, { $inc: {"Coin": Miktar}}, {upsert: true}).exec();
-}
 
 Collection.prototype.array = function () {
     return [...this.values()]

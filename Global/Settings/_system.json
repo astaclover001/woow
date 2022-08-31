@@ -1,84 +1,53 @@
 {
     "SERVER": {
-        "ID": "922949759361237014",
-        "Name": "SE7EN"
+        "ID": "904188905736253500",
+        "Name": ""
     },
 
     "TOKENS": {
-        "Requirements": "OTcwODEyMDQxNjI5Njc1NTQw.YnBZKw.Kzp_qA0hSI0AZpx6pc1eID49ky0", 
-        "Statistics": "OTcwODEyNzQ4NzUxNTY4ODk4.YnBZ1A.7Fjr6rcMOVSBNlIRNtgOjjEUFDk",
-        "Voucher": "OTcxODgwNjcwNzI3MTM5Mzk4.YnQ8aA.9rGJk9JLPxf_m-MuW2yBZ-1YuLQ",
+        "Requirements": "OTExNzIyNTEzNTY5MDI2MDY4.YZlhwg.9pvvjUt6adwgvbPJvxDKdLmamlQ",
+        "Statistics": "OTExNzIyNjM0OTczMTU1Mzg4.YZlh3w.5T1lWA0C7wx-3hOLmGoXUfkpyKA",
+        "Voucher": "ODkwMzA0MzY1MjYzNDY2NTc3.YUt2jQ.Es_eKE68IV5JSD_vUMRfU4HvCCM",
 
         "SECURITY": {
-            "MAIN": "OTcwODEyOTE4MDA4NTI0ODAw.YnBZ_A.CsJgeGxBq1Pf9lIer2BVih8xkv0",
-            "SEC_ONE": "OTcwODEzMDEzOTE5NjkwNzYy.YnBaEw.r1mrkSlt7n-LIhXsXdyKy4YOAsQ",
-            "SEC_TWO": "OTcwODEzMTA4MDUyNDM0OTk0.GyLeUt.Rb24T-lSPMveJBJk_les0HFSqrekYKs2U1tNNc",
-            "SEC_THREE": "OTcwODEzMzE5MjM1NjY1OTcw.YnBaXA.hsr4o1Zl_HwNQMMrpxGgpF2autY",
-            "SEC_FOUR": "OTcwODEzMzk1MjIzODU5MjYw.YnBabg.JFBAgtGmsSybpeUROfvR2Lni6y4",
+            "MAIN": "OTExNzIzMDMyNDEyODE5NDc2.YZliPQ.jtlZZLlIDb4CFxCeclHzNWAkwSk",
+            "SEC_ONE": "OTExNzIzMDMyNDEyODE5NDc2.YZliPQ.jtlZZLlIDb4CFxCeclHzNWAkwSk",
+            "SEC_TWO": "OTExNzIyNzM1NzExOTczNDQ2.YZlh9w.kjZcpdjXypVH2052Xd2gJs7sxEs",
+            "SEC_THREE": "OTExNzIyNjc1ODA4OTExNDYx.YZlh6A.-QPYprzm0ypAKhzCsYySzCU2gSg",
+            "SEC_FOUR": "OTExNzIyODE4MzEwMzg1NjY0.YZliCg.ufQTnVR0lXHw-FC_agCHEf99_0s",
             "DISTS": [
-                "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
-                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
-                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
-                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI"
+                "OTExNzIzMDgxNjEyMDA5NDky.YZliSQ.hmcI88dzvnZO9T_oAzFqaTEMoN0",
+                "OTExNzIzMTk4MzgxNDI4NzY3.YZliZQ.xl1upKxYeZ9U_vhJaoESA7qVnfA",
+                "OTE1NzQxMjk2ODU2MDM5NDI0.YagAig.nH-7qkQPUvAeblaN1G822L6s8cU",
+                "OTE1NzQxNzQyNjM1MDQwODA4.YagA9Q.jYBW21_3FZ2Qe7IEFOiOPQ3Ocf4",
+                "OTE1NzQyMjI0MjYyNzY2NjYy.YagBZw.PEi3a6xmOcG1U6-T--vILEGl894",
+                "OTE1NzQ0OTUwMDU3MDQ2MDI2.YagD8Q.8PnkXCZJfjlithO9Y_emQSdPkzk",
+                "OTE1NzQ1NTY5MDAyMDk0NjEy.YagEhQ.3mBPh-xzQiKHQSzPO9OyX63V8yI",
+                "OTE1NzQ1OTgxODU1ODM4Mjk4.YagE5w.vaTfsmR9-AnY4QXCFLG2LBeHv1E",
+                "OTE1NzQ2NTIzNTgzNzU0Mjcw.YagFaA.x6-oG_psZlgHxLexV6ks_EG1X4E",
+                "OTExNzIzMzI3MTM4MTkzNDA5.YZlihA.72YaH_bwK0tXk66nL0vq5xgRg5c"
             ],
             "GUILD_OWNER_TOKEN": ""
         },
 
         "WELCOME": {
-            "Active": true,
-            "WELCOMES": [
-                "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
-                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
-                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
-                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI",
-                ""
-        ],
-            "WELCOME_CHANNELS": [
-                "970368039021314169",
-        "970368040824893450",
-        "970368042158661733",
-        "970368043580551258",
-        "970368045136629820"
-            ]
+            "Active": false,
+            "WELCOMES": [],
+            "WELCOME_CHANNELS": []
         }
     },
     "botSettings": {
         "Prefixs": [".","+","!","/","-"]
     },
 
-
-
-    "WELCOMES": [
-        "OTcwODk5MzgxMTY1MzU5MTM0.GqbUJY.I4LVJX8rFGZn3h2QOHtXWkDTi315lT14POjKQg",
-                "OTcwODk5NjY1Mzg4MjA0MDQy.YnCqxg.-Ow6Pkey0sFpknRmeIiapDVW1bY",
-                "OTcwODk5OTU4ODkyOTg2Mzc5.YnCrDA.tw3LVMPvWt4kNi5mUO1UB3fSYuQ",
-                "OTcwOTAwMDU0MTE2MjgyNDQw.YnCrIw.8JFVv523JNsKs5BV2z5eeZTxNxI",
-                ""
-    ],
-
-    "WELCOME_CHANNELS": [
-        "970368039021314169",
-        "970368040824893450",
-        "970368042158661733",
-        "970368043580551258",
-        "970368045136629820"
-    ],
-
-    "embed": {
-        "iconURL": "",
-        "başlık": "",
-        "altbaşlık": "SE7EN Ø Créatéd by SEHIRΛ",
-        "renk": "RANDOM"
-      },
-
     "botStatus": {
         "Status": "dnd",
-        "Name": "SE7EN Ø Créatéd by SEHIRΛ ",
-        "voiceChannelID": "970368078116454530"
+        "Name": "† Monârch Creatéd by ΛCΛR",
+        "voiceChannelID": "911769039376879716"
     },
     "Database" : {
         "Active": true,
-        "MongoURL": "mongodb+srv://sehira:lespacra2@cluster0.nhjmm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        "MongoURL": "mongodb://127.0.0.1/rechosa"
     }
 
 }

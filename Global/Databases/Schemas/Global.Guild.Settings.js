@@ -5,7 +5,7 @@ const schema = mongoose.model('Guild', new mongoose.Schema({
     guildID: String,
     Date: {type: Date, default: Date.now()},
     Ayarlar: {type: Object, default: {
-        staff: ["935539319614078986", "417603398813089793"]
+        staff: ["935539319614078986"]
     }},
     talentPerms: Object,
 }));

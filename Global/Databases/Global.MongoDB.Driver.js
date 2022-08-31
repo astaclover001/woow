@@ -6,7 +6,7 @@ class Mongoose {
             require('mongoose').connect(url, {
                 connectTimeoutMS: 1000,
                 useNewUrlParser: true,
-                useUnifiedTopology: false
+                useUnifiedTopology: true
             }).then(() => {
                 setTimeout(() => {
                     client.logger.log(`${black.bgHex('#D9A384')(client.botName.toUpperCase())} Connected to the MongoDB.`, "mongodb");

@@ -9,7 +9,7 @@ const { promisify } = require("util");
 
 const globPromise = promisify(glob);
 
-class SEHIRA extends Client {
+class ACAR extends Client {
       constructor (...options) {
             super({
                 options,
@@ -18,7 +18,6 @@ class SEHIRA extends Client {
             DISCORD_LOGS(this)
             Object.defineProperty(this, "location", { value: process.cwd() });
             this.sistem = this.system = require('../Settings/_system.json');
-            this.coinConf = global.coinConf = require('../Settings/_coin'); 
             this.users.getUser = GetUser;
             this.getUser = GetUser;
             async function GetUser(id) { try { return await this.users.fetch(id); } catch (error) { return undefined; } };
@@ -104,30 +103,26 @@ class SEHIRA extends Client {
             });
          }
 
-
-        
-
-
         connect(token) {
             if(!token) {
                 this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} Tokeni girilmediğinden dolayı bot kapanıyor...`,"error");
                 process.exit()
                 return;
             }
-            this.login(token).then(sehira => {
+            this.login(token).then(acar => {
                 this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} BOT kullanıma aktif edilmiştir.`,"botReady")
                 this.user.setPresence({ activities: [{name: global.sistem.botStatus.Name}], status: global.sistem.botStatus.Status })
                 this.on("ready", async () => {
                     if(this.botName == "Statistics") return;
-                    let kanal = this.channels.cache.get(kanallar.botSesKanal)
+                    let kanal = this.channels.cache.get(sistem.botStatus.voiceChannelID)
                     if(kanal) joinVoiceChannel({ channelId: kanal.id, guildId: kanal.guild.id, adapterCreator: kanal.guild.voiceAdapterCreator});
                 })
 
 
-            }).catch(sehira => {
+            }).catch(acar => {
                 this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} Botun tokeni doğrulanamadı. 5 Saniye sonra tekrardan denenecektir...`,"reconnecting")
                 setTimeout(() => {
-                    this.login().catch(sehira => {
+                    this.login().catch(acar => {
                         this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} => Bot tokeni tamamiyle doğrulanamadı.. Bot kapanıyor...`,"error")
                         process.exit()
                     })
@@ -137,4 +132,4 @@ class SEHIRA extends Client {
 
 }
 
-module.exports = { SEHIRA }
+module.exports = { ACAR }

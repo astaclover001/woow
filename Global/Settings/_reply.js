@@ -22,7 +22,6 @@ module.exports = {
     isimapi:       `${prefix} \`İsim Hatası (32 Karakter)\` İsim karakteri fazla olduğundan dolayı işlem yapılamadı.`,
     cezavar:       `${prefix} \`Aktif Ceza\` belirtilen üyenin zaten aktif bir cezalandırılması bulunmaktadır.`,
     cezayok:       `${prefix} \`De-Aktif Ceza\` bu kişinin aktif cezalandırması bulunamadı.`,
-    teyitzorunlu:  `${prefix} \`Teyit zorunlu\` olduğundan dolayı kayıt işlemi gerçekleştirilemedi.`,
     yetkilinoban:  `${prefix} \`Yetkili\` Bu kişi yetkili olduğu için yasaklayamazsın.`,
     yasaklamayok:  `${prefix} \`Yasaklama Yok\` Sunucu da hiç yasaklama bulunamadı.`,
     ayarlamayok:       `${prefix} Belirtilen komutun ayarları yapılmadığından dolayı işlem iptal edildi. Sistem yöneticisine başvurun!`,

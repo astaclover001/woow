@@ -61,7 +61,7 @@ GuildMember.prototype.Register = async function (name, gender = undefined, regis
         rol = roller.kadınRolleri.map(x => this.guild.roles.cache.get(x)).join(",")
         rolver = roller.kadınRolleri
     }
-    await this.recordSetRoles(rolver).then(sehira => { if(this.user.username.includes(ayarlar.tag)) this.roles.add(roller.tagRolü) });
+    await this.recordSetRoles(rolver).then(acar => { if(this.user.username.includes(ayarlar.tag)) this.roles.add(roller.tagRolü) });
 
     let seskanal = registrant.guild.channels.cache.filter(x => x.parentId == kanallar.publicKategorisi && x.type == "GUILD_VOICE" && x.id != kanallar.sleepRoom && !kanallar.ayrıkKanallar.some(kanal => x.id == kanal.id) && !_statSystem.musicRooms.some(kanal => x.id == kanal.id)).random()
     let chatkanalı = registrant.guild.channels.cache.get(kanallar.chatKanalı)
@@ -73,9 +73,9 @@ GuildMember.prototype.Register = async function (name, gender = undefined, regis
 	let kanal = this.guild.channels.cache.get(kanallar.chatKanalı)
 	if(kanal) {
         if(this.user.username.includes(ayarlar.tag)) {
-            kanal.send(`:tada: ${this}, Ailemize Katıldı! Ailemize hoş geldin, İyi Eğlenceler.`).then(x => {setTimeout(() => { x.delete() }, 15250)})
+            kanal.send(`:tada: ${this} Ailemize Katıldı! ailemize hoş geldin, İyi Eğlenceler.`).then(x => {setTimeout(() => { x.delete() }, 15250)})
         } else {
-            kanal.send(`:tada: ${this}, Aramıza hoş geldin! Rol seçim odalarından rollerini almayı unutma! İyi eğlenceler.`).then(x => {setTimeout(() => { x.delete() }, 20000)}) 
+            kanal.send(`:tada: ${this} Aramıza Katıldı! sende bizden biri olmak ister misin? ozaman ${ayarlar.serverName} tagı (\` ${ayarlar.tag} \`) almalısın şimdiden, İyi Eğlenceler.`).then(x => {setTimeout(() => { x.delete() }, 20000)}) 
         }
 	}
     }
@@ -115,7 +115,7 @@ GuildMember.prototype.removeStaff = async function(lastRole, manuel) {
           if(Yetkili && Yetkili.Staffs) {
               const LanYarramBakSikildiler = this.guild.members.cache.get(userData.StaffGiveAdmin)
               if(LanYarramBakSikildiler) LanYarramBakSikildiler.send({embeds: [new genEmbed().setDescription(`${LanYarramBakSikildiler} Merhaba, ${this} (\`${this}\`) isimli çektiğin yetkili yetkiyi \`${tarihsel(Date.now())}\` tarihinde bıraktı.`).setFooter("bu bilgilendirmeye mesajına uyarak, lütfen eski yetkilini sunucuya tekrardan davet et.")]}).catch(err => { })
-              const findUser = Yetkili.Staffs.find(sehira => sehira.id == this.id);
+              const findUser = Yetkili.Staffs.find(acar => acar.id == this.id);
               await Users.updateOne({ _id: userData.StaffGiveAdmin }, { $pull: { "Staffs": findUser } }, { upsert: true })
               client.Upstaffs.removePoint(userData.StaffGiveAdmin, -_statSystem.points.staff, "Yetkili")
           }
@@ -149,7 +149,7 @@ GuildMember.prototype.removeTagged = async function () {
         let Yetkili = await Users.findOne({_id: userData.TaggedGiveAdmin }) 
            if(Yetkili && Yetkili.Taggeds) {
                 const koşKoşBabanıSikiyorlar = this.guild.members.cache.get(userData.TaggedGiveAdmin)
-                const findUser = Yetkili.Taggeds.find(sehira => sehira.id == this.id);
+                const findUser = Yetkili.Taggeds.find(acar => acar.id == this.id);
                 await Users.updateOne({ _id: userData.TaggedGiveAdmin }, { $pull: { "Taggeds": findUser } }, { upsert: true })
                 client.Upstaffs.removePoint(userData.TaggedGiveAdmin, -_statSystem.points.tagged, "Taglı")
             } 
@@ -177,7 +177,7 @@ GuildMember.prototype.dangerRegistrant = async function () {
         let Yetkili = await Users.findOne({_id: userData.Registrant }) || {}
           if(Yetkili && Yetkili.Records) {
               const koşAnanıSikiyorlar = this.guild.members.cache.get(userData.Registrant)
-              const findUser = Yetkili.Records.find(sehira => sehira.User == this.id);
+              const findUser = Yetkili.Records.find(acar => acar.User == this.id);
               await Users.updateOne({ _id: userData.Registrant }, { $pull: { "Records": findUser } }, { upsert: true })
               await client.Upstaffs.removePoint(userData.Registrant, -_statSystem.points.record, "Kayıt")
           } 
@@ -217,7 +217,7 @@ GuildMember.prototype.Left = async function () {
         let Yetkili = await Users.findOne({_id: userData.TaggedGiveAdmin }) || {}
            if(Yetkili && Yetkili.Taggeds) {
                 const koşKoşBabanıSikiyorlar = this.guild.members.cache.get(userData.TaggedGiveAdmin)
-                const findUser = Yetkili.Taggeds.find(sehira => sehira.id == this.id);
+                const findUser = Yetkili.Taggeds.find(acar => acar.id == this.id);
                 await Users.updateOne({ _id: userData.TaggedGiveAdmin }, { $pull: { "Taggeds": findUser } }, { upsert: true })
                 await client.Upstaffs.removePoint(userData.StaffGiveAdmin, -_statSystem.points.tagged, "Taglı")
             } 
@@ -230,7 +230,7 @@ GuildMember.prototype.Left = async function () {
           if(Yetkili && Yetkili.Staffs) {
               const BabanıSikeyim = this.guild.members.cache.get(userData.StaffGiveAdmin)
               if(BabanıSikeyim) BabanıSikeyim.send({embeds: [new genEmbed().setDescription(`${BabanıSikeyim} Merhaba, ${this} (\`${this}\`) isimli çektiğin yetkili yetkiyi sunucudan çıkarak \`${tarihsel(Date.now())}\` tarihinde bıraktı.`).setFooter("bu bilgilendirmeye mesajına uyarak, lütfen eski yetkilini sunucuya tekrardan davet et.")]}).catch(err => { })
-              const findUser = Yetkili.Staffs.find(sehira => sehira.id == this.id);
+              const findUser = Yetkili.Staffs.find(acar => acar.id == this.id);
               await Users.updateOne({ _id: userData.StaffGiveAdmin }, { $pull: { "Staffs": findUser } }, { upsert: true })
               client.Upstaffs.removePoint(userData.StaffGiveAdmin, -_statSystem.points.staff, "Yetkili")
           } 
@@ -267,7 +267,7 @@ GuildMember.prototype.Left = async function () {
 
 
 
- GuildMember.prototype.addPunitives = async function(type, staff, reason = "Sebep belirtilmedi.", message, duration, muteFlood, rulesFlood, nofi = 1) {
+GuildMember.prototype.addPunitives = async function(type, staff, reason = "Sebep belirtilmedi.", message, duration, muteFlood) {
     let cezano = await Punitives.countDocuments().exec();
     cezano = cezano == 0 ? 1 : cezano + 1;
         if(type == 1) type = "Kalkmaz Yasaklama"
@@ -276,8 +276,6 @@ GuildMember.prototype.Left = async function () {
         if(type == 4) type = "Ses Susturulma"
         if(type == 5) type = "Metin Susturulma"   
         if(type == 6) type = "Uyarılma"
-        if(type == 7) type = "Teyit Yasaklı"
-        if(type == 8) type = "Underworld"
         let ceza;
         let islem;
         if(duration) {
@@ -304,58 +302,21 @@ GuildMember.prototype.Left = async function () {
         let logKanal = [
             {type: "Kalkmaz Yasaklama", channel: "forceban-log"},
             {type: "Yasaklama", channel: "ban-log"},
-            {type: "Underworld", channel: "underworld-log"},
             {type: "Cezalandırılma", channel: "jail-log"},
             {type: "Ses Susturulma", channel: "sesmute-log"},
             {type: "Metin Susturulma", channel: "mute-log"},
             {type: "Uyarılma", channel: "uyarı-log"},
-            {type: "Teyit Yasaklı", channel: "teyit-yasaklı-log"},
         ]
-
         let _findLogChannel = logKanal.find(x => x.type == type)
         if(_findLogChannel) {
             let findedChannel = message.guild.kanalBul(_findLogChannel.channel)
             if(findedChannel) findedChannel.send({embeds: [new genEmbed().setFooter(`${ayarlar ? ayarlar.embedSettings ? ayarlar.embedSettings.Footer ? `${ayarlar.embedSettings.Footer}` : message.guild.name : message.guild.name : message.guild.name } • Ceza Numarası: #${cezano}`,this.user.avatarURL({dynamic: true})).setDescription(`${this.toString()} üyesine, **${tarihsel(Date.now())}** tarihinde ${duration ? `**${moment.duration(ms(duration)).format('Y [Yıl,] M [Ay,] d [Gün,] h [Saat,] m [Dakika]')}** boyunca` : ``} \`${reason}\` nedeniyle ${staff.toString()} tarafından ceza-i işlem uygulandı.`)]})
         }
-        if(muteFlood && muteFlood == true) await message.channel.send(`${message.guild.emojiGöster(emojiler.chatSusturuldu)} ${this.toString()} Sohbet kanallarında fazla hızlı mesaj gönderdiğiniz için \` 1 Dakika \` süresince susturuldunuz. (Ceza Numarası: \`#${cezano}\`)`).then(x => setTimeout(() => {
-            x.delete().catch(err => {})
-        }, 30000))
-        if(rulesFlood && rulesFlood == true) await message.channel.send(`${message.guild.emojiGöster(emojiler.chatSusturuldu)} ${this.toString()} Sohbet kanallarında ki kurallara uyum sağlanmadığı için \` 10 Dakika \` süresince susturuldunuz. (Ceza Numarası: \`#${cezano}\`)`).then(x => setTimeout(() => {
-            x.delete().catch(err => {})
-        }, 30000))
-        if(nofi == 1 && !muteFlood && !rulesFlood) await message.channel.send(`${type == "Metin Susturulma" ? message.guild.emojiGöster(emojiler.chatSusturuldu) : type == "Ses Susturulma" ? message.guild.emojiGöster(emojiler.sesSusturuldu) : type == "Yasaklama" ? message.guild.emojiGöster(emojiler.Yasaklandı) : type == "Cezalandırılma" ? message.guild.emojiGöster(emojiler.Cezalandırıldı) : type == "Kalkmaz Yasaklama" ? message.guild.emojiGöster(emojiler.Yasaklandı) : type == "Uyarılma" ? message.guild.emojiGöster(emojiler.Onay) : message.guild.emojiGöster(emojiler.Onay)} ${this.toString()} isimli üyeye \`${reason}\` sebebiyle "__${type}__" türünde ${duration ? `\`${moment.duration(ms(duration)).format('Y [yıl,] M [ay,] d [gün,] h [saat,] m [dakika]')}\` boyunca` : ``} ceza-i işlem uygulandı. (\`Ceza Numarası: #${cezano}\`)`)
-        await this.send({content: `Sunucumuz da \`${staff.user.tag}\` tarafından **${reason}** sebebi ile ${type == "Kalkmaz Yasaklama" ? 
-                "tamamiyle kalkmaz yasaklamaya tabi tutuldun."
-            : type == "Yasaklama" ? 
-                "yasaklandın."
-            : type == "Cezalandırılma" ? 
-                "cezalıya gönderildin."
-            : type == "Ses Susturulma" ? 
-                "seste susturuldun."
-            : type == "Metin Susturulma" ?
-                "metin kanallarında susturuldun."
-            : type == "Underworld" ?
-                "Underworld'e gönderildin."
-            : type == "Uyarılma" ?
-            "uyarıldın."
-            : `"${type}" türünde ceza-i işlem uygulandı.`} ${duration ? `Ceza bitiş tarihi \`${tarihsel(Date.now()+ms(duration))}\`. Eğer bu konu hakkında bir itirazın var ise üst yetkililerimize ulaşmaktan çekinme!` : "Eğer bu konu hakkında bir itirazın var ise üst yetkililerimize ulaşmaktan çekinme!"} (**Ceza Numarası**: \` #${cezano} \`)`}).catch(err => {
+        if(muteFlood) await message.channel.send(`${message.guild.emojiGöster(emojiler.chatSusturuldu)} ${this.toString()} Sohbet kanallarında fazla hızlı mesaj gönderdiğiniz için \`1 Dakika\` süresince susturuldunuz. (Ceza Numarası: \`#${cezano}\`)`)
+        if(!muteFlood) await message.channel.send(`${type == "Metin Susturulma" ? message.guild.emojiGöster(emojiler.chatSusturuldu) : type == "Ses Susturulma" ? message.guild.emojiGöster(emojiler.sesSusturuldu) : type == "Yasaklama" ? message.guild.emojiGöster(emojiler.Yasaklandı) : type == "Cezalandırılma" ? message.guild.emojiGöster(emojiler.Cezalandırıldı) : type == "Kalkmaz Yasaklama" ? message.guild.emojiGöster(emojiler.Yasaklandı) : type == "Uyarılma" ? message.guild.emojiGöster(emojiler.Onay) : message.guild.emojiGöster(emojiler.Onay)} ${this.toString()} isimli üyeye \`${reason}\` sebebiyle "__${type}__" türünde ${duration ? `\`${moment.duration(ms(duration)).format('Y [yıl,] M [ay,] d [gün,] h [saat,] m [dakika]')}\` boyunca` : ``} ceza-i işlem uygulandı. (\`Ceza Numarası: #${cezano}\`)`)
+        if(!muteFlood) await this.send({embeds: [new genEmbed().setFooter(`${ayarlar ? ayarlar.embedSettings ? ayarlar.embedSettings.Footer ? `${ayarlar.embedSettings.Footer}` : message.guild.name : message.guild.name : message.guild.name } • Ceza Numarası: #${cezano}`,this.user.avatarURL({dynamic: true})).setDescription(`${staff.toString()} tarafından **${reason}** sebebiyle "${type}" türünde ${duration ? `\`${moment.duration(ms(duration)).format('Y [yıl,] M [ay,] d [gün,] h [saat,] m [dakika]')}\` boyunca` : ``} işlem uygulandı.`)]}).catch(err => {
            
         })
-        if(nofi == 0 && !muteFlood && !rulesFlood) await message.editReply({embeds: [new genEmbed().setDescription(`${message.guild.emojiGöster(emojiler.Onay)} ${this.toString()} isimli üyeye **${reason}** sebebiyle ${duration ? `\`${moment.duration(ms(duration)).format('Y [Yıl,] M [Ay,] d [Gün,] h [Saat,] m [Dakika]')}\` boyunca` : ``} ${type == "Kalkmaz Yasaklama" ? 
-        "tamamiyle kalkmaz yasaklamaya tabi tutuldun."
-    : type == "Yasaklama" ? 
-        "yasakladın."
-    : type == "Cezalandırılma" ? 
-        "cezalıya gönderdin."
-    : type == "Ses Susturulma" ? 
-        "seste susturdun."
-    : type == "Metin Susturulma" ?
-        "metin kanallarında susturdun."
-    : type == "Underworld" ?
-        "Undeworld'e gönderdin."
-    : type == "Uyarılma" ?
-    "uyardın."
-    : `"${type}" türünde ceza-i işlem uygulandı.`} `).setFooter(`${this.user.tag} • Ceza Numarası: #${cezano} • ${type}`, this.user.avatarURL({dynamic: true}))], components: []})
         switch(type) {
             case "Kalkmaz Yasaklama": {
                 await this.guild.members.ban(this.id, { reason: `#${ceza.No} (${ceza.Reason})` }).catch(err => {})
@@ -364,11 +325,10 @@ GuildMember.prototype.Left = async function () {
                     No: ceza.No,
                     _id: this.id,
                 })
-                
                 return await islem.save();
             }
             case "Yasaklama": {
-                    await this.guild.members.ban(this.id, { reason: `#${ceza.No} (${ceza.Reason})` }).catch(err => {})
+                await this.guild.members.ban(this.id, { reason: `#${ceza.No} (${ceza.Reason})` }).catch(err => {})
                 return await Users.updateOne({ _id: staff.id } , { $inc: { "Uses.Ban": 1 } }, {upsert: true})
             }
             case "Atılma": {
@@ -394,6 +354,7 @@ GuildMember.prototype.Left = async function () {
                 return await islem.save();
             }
             case "Ses Susturulma": {
+                if(this && this.voice) await this.voice.setMute(true)
                 await Users.updateOne({ _id: staff.id } , { $inc: { "Uses.VoiceMute": 1 } }, {upsert: true})
                 if(duration) { 
                     islem = new Vmutes({
@@ -407,7 +368,6 @@ GuildMember.prototype.Left = async function () {
                         _id: this.id,
                     })
                 }
-                if(this && this.voice) await this.voice.setMute(true).catch(err => {})
                 return await islem.save();
             }
             case "Metin Susturulma": {
@@ -427,21 +387,11 @@ GuildMember.prototype.Left = async function () {
                 }
                 return await islem.save();
             }
-            case "Teyit Yasaklı": {
-                await this.voice.disconnect().catch(err => {})
-                if(this) await this.setRoles(roller.şüpheliRolü)
-                return 
-            }
-            case "Underworld": {
-                await this.voice.disconnect().catch(err => {})
-                if(this) await this.setRoles(roller.underworldRolü)
-                return await Users.updateOne({ _id: staff.id } , { $inc: { "Uses.Underworld": 1 } }, {upsert: true})
-            }
             case "Uyarılma": {
                 return await Users.updateOne({ _id: staff.id } , { $inc: { "Uses.Warns": 1 } }, {upsert: true})
             }
         }
-}
+} 
 
 
 

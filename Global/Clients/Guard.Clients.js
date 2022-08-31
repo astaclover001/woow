@@ -15,7 +15,7 @@ const dataLimit = new Map()
 const { bgBlue, black, green } = require("chalk");
 const sistem = global.sistem = require('../Settings/_system.json');
 const DISCORD_LOGS = require('discord-logs')
-class SEHIRA extends Client {
+class ACAR extends Client {
       constructor (...options) {
             super({
                 options,
@@ -346,7 +346,7 @@ ${limitController.sort((a, b) => b.date - a.date).map((x, index) => `${index+1}.
                 process.exit()
                 return;
             }
-            this.login(token).then(sehira => {
+            this.login(token).then(acar => {
                 this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} BOT kullanıma aktif edilmiştir.`,"botReady")
                 this.user.setPresence({ activities: [{name:sistem.botStatus.Name}], status:sistem.botStatus.Status })
                 this.on("ready", async () => { 
@@ -356,15 +356,15 @@ ${limitController.sort((a, b) => b.date - a.date).map((x, index) => `${index+1}.
                     } 
                     if(this.botName == "Guard_IV") return;
 		    if(this.botName == "Guard_I") return;
-                    let kanal = this.channels.cache.get(kanallar.botSesKanal)
+                    let kanal = this.channels.cache.get(sistem.botStatus.voiceChannelID)
                     if(kanal) joinVoiceChannel({ channelId: kanal.id, guildId: kanal.guild.id, adapterCreator: kanal.guild.voiceAdapterCreator});
                 })
                     
 
-            }).catch(sehira => {
+            }).catch(acar => {
                 this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} Botun tokeni doğrulanamadı. 5 Saniye sonra tekrardan denenecektir...`,"reconnecting")
                 setTimeout(() => {
-                    this.login().catch(sehira => {
+                    this.login().catch(acar => {
                         this.logger.log(`${black.bgHex('#D9A384')(this.botName.toUpperCase())} => Bot tokeni tamamiyle doğrulanamadı.. Bot kapanıyor...`,"error")
                         process.exit()
                     })
@@ -374,4 +374,4 @@ ${limitController.sort((a, b) => b.date - a.date).map((x, index) => `${index+1}.
         
 }
 
-module.exports = { SEHIRA }
+module.exports = { ACAR }

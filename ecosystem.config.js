@@ -1,18 +1,9 @@
 module.exports = {
   apps: [
     {
-      name: "Welcome",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
-      watch: false,
-      exec_mode: "cluster",
-      max_memory_restart: "2G",
-      cwd: "./Server/Welcome"
-    },
-    {
       name: "Mainframe",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -20,8 +11,8 @@ module.exports = {
     },
     {
       name: "Requirements",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -29,8 +20,8 @@ module.exports = {
     },
     {
       name: "Statistics",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -38,8 +29,8 @@ module.exports = {
     },
     {
       name: "Security_I",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -47,8 +38,8 @@ module.exports = {
     },
     {
       name: "Security_II",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -56,8 +47,8 @@ module.exports = {
     },
     {
       name: "Security_III",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -65,8 +56,8 @@ module.exports = {
     },
     {
       name: "Security_IV",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",
@@ -74,8 +65,8 @@ module.exports = {
     },
     {
       name: "Distributors",
-      namespace: "SEHIRA",
-      script: 'main.sehira',
+      namespace: "ACARFX",
+      script: 'main.acar',
       watch: false,
       exec_mode: "cluster",
       max_memory_restart: "2G",

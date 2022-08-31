@@ -14,12 +14,6 @@ const kalanzaman = global.kalanzaman = function(tarih) {
     return moment.duration((tarih - Date.now())).format('H [Saat,] m [Dakika,] s [Saniye]');
 }
 
-const timeTag = global.timeTag = function(date) {
-    date = String(date)
-    date = date.replace("000", "")
-    return `<t:${Number(date)}:R>`;
-}
-
 const tarihhesapla = global.tarihHesapla = (date) => {
     const startedAt = Date.parse(date);
     var msecs = Math.abs(new Date() - startedAt);
